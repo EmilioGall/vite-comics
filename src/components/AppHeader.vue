@@ -69,7 +69,7 @@ export default {
 
       <ul class="menu-list">
 
-        <li v-for="element in menu">
+        <li v-for="element in menu" :class="{ active: element.isActive }">
 
           <a href="">
             {{ element.title }}
@@ -86,32 +86,54 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 
 header {
   @include flex(row, space-between, center);
-  padding: 20px;
+  padding: 0 5px;
+  height: $header-height;
 
   // Debug
-  background-color: lightcoral;
+  border: 1px solid lightcoral;
 
-  img {
-    width: 80px;
+  .menu-container {
+
+    img {
+      aspect-ratio: 1;
+      width: 80px;
+
+    }
 
   }
 
-  .menu-list {
-    display: flex;
+  .menu-container {
 
-    li {
-      margin-left: 10px;
+    .menu-list {
+      @include flex(row, end, center);
+
+      li {
+        padding: 10px;
+        @include flex(row, end, center);
+        height: $header-height;
+        border-bottom: 5px solid rgba($color: #000000, $alpha: 0);
+
+        &:last-child {
+          padding-right: 0px;
+
+        }
+
+        &.active {
+          color: $general-lightblue;
+          border-bottom: 5px solid $general-lightblue;
+
+        }
+
+      }
 
     }
 
   }
 
 }
-
 </style>
