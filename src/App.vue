@@ -40,7 +40,7 @@ export default {
   width: 80%;
 
   // Debug
-  background-color: lightcoral;
+  // background-color: lightcoral;
 
 }
 

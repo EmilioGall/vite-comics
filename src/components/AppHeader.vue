@@ -71,7 +71,9 @@ export default {
 
         <li v-for="element in menu">
 
-          {{ element.title }}
+          <a href="">
+            {{ element.title }}
+          </a>
 
         </li>
 
@@ -89,14 +91,27 @@ export default {
 @use "../style/partials/variables" as *;
 
 header {
-  display: flex;
+  @include flex(row, space-between, center);
+  padding: 20px;
+
+  // Debug
+  background-color: lightcoral;
+
+  img {
+    width: 80px;
+
+  }
 
   .menu-list {
     display: flex;
 
-  }
-  
-}
+    li {
+      margin-left: 10px;
 
+    }
+
+  }
+
+}
 
 </style>
