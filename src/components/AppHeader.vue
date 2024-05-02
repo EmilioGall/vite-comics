@@ -57,15 +57,18 @@ export default {
 
 <template>
 
-  <header>
+  <header class="wrapper">
 
-    <div class="logo-container">
+    <!-- Logo Section -->
+    <section class="logo-container">
 
       <img src="../assets/img/dc-logo.png" alt="">
 
-    </div>
+    </section>
+    <!-- /Logo Section -->
 
-    <div class="menu-container">
+    <!-- Menu Section -->
+    <section class="menu-container">
 
       <ul class="menu-list">
 
@@ -79,23 +82,24 @@ export default {
 
       </ul>
 
-    </div>
+    </section>
+    <!-- /Menu Section -->
 
   </header>
 
 </template>
 
 <style lang="scss" scoped>
+
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 
 header {
   @include flex(row, space-between, center);
-  padding: 0 5px;
   height: $header-height;
 
   // Debug
-  border: 1px solid lightcoral;
+  // border: 1px solid lightcoral;
 
   .menu-container {
 
@@ -136,4 +140,5 @@ header {
   }
 
 }
+
 </style>

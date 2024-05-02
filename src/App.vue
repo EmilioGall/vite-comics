@@ -2,6 +2,7 @@
 
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import AppBanner from './components/AppBanner.vue';
 import AppFooter from './components/AppFooter.vue';
 
 export default {
@@ -10,6 +11,7 @@ export default {
 
     AppHeader,
     AppMain,
+    AppBanner,
     AppFooter
     
   },
@@ -20,11 +22,13 @@ export default {
 
 <template>
 
-  <div class="wrapper">
+  <div>
 
     <AppHeader />
   
     <AppMain />
+
+    <AppBanner />
   
     <AppFooter />
 
@@ -35,13 +39,6 @@ export default {
 
 <style lang="scss" scoped>
 
-.wrapper {
-  margin: 0 auto;
-  width: 80%;
 
-  // Debug
-  // background-color: lightcoral;
-
-}
 
 </style>
