@@ -59,15 +59,15 @@ export default {
 
   <header>
 
-    <div>
+    <div class="logo-container">
 
-      <img src="" alt="">
+      <img src="../assets/img/dc-logo.png" alt="">
 
     </div>
 
-    <div>
+    <div class="menu-container">
 
-      <ul>
+      <ul class="menu-list">
 
         <li v-for="element in menu">
 
@@ -83,4 +83,20 @@ export default {
 
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+@use "../style/partials/mixin" as *;
+@use "../style/partials/variables" as *;
+
+header {
+  display: flex;
+
+  .menu-list {
+    display: flex;
+
+  }
+  
+}
+
+
+</style>

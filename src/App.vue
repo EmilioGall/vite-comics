@@ -20,16 +20,28 @@ export default {
 
 <template>
 
-  <AppHeader />
+  <div class="wrapper">
 
-  <AppMain />
+    <AppHeader />
+  
+    <AppMain />
+  
+    <AppFooter />
 
-  <AppFooter />
+  </div>
+
 
 </template>
 
 <style lang="scss" scoped>
 
+.wrapper {
+  margin: 0 auto;
+  width: 80%;
 
+  // Debug
+  background-color: lightcoral;
+
+}
 
 </style>
