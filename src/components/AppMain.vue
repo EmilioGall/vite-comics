@@ -44,13 +44,13 @@ export default {
 
           <div class="col" v-for="title in comics">
 
-            <SimpleCard 
-            :cardImage="title.thumb" 
-            :cardTitle="title.series"/>
+            <SimpleCard :cardImage="title.thumb" :cardTitle="title.series" />
 
           </div>
 
         </div>
+
+        <button>LOAD MORE</button>
 
       </div>
 
@@ -93,6 +93,9 @@ export default {
 
     .wrapper {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       h3 {
         display: inline-block;
@@ -101,13 +104,13 @@ export default {
         position: absolute;
         top: -40px;
         left: 0px;
-  
+
       }
-  
+
       .row {
         @include flex(row, space-between, stretch, wrap);
         margin-top: 15px;
-  
+
         .col {
           width: calc(100% / 6);
           margin-bottom: 1rem;
@@ -116,6 +119,15 @@ export default {
           // border: 2px solid white;
 
         }
+
+      }
+
+      button {
+        width: 20%;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: $general-lightblue;
+
       }
 
     }
