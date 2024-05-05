@@ -75,7 +75,9 @@ export default {
         <li v-for="element in menu" :class="{ active: element.isActive }">
 
           <a href="">
+
             {{ element.title }}
+            
           </a>
 
         </li>

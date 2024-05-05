@@ -86,15 +86,32 @@ export default {
 
     @include flex(column, center, center);
 
-    .row {
-      @include flex(row, space-between, stretch, wrap);
+    .wrapper {
+      position: relative;
 
-      .col {
-        width: calc(100% / 6);
-        margin-bottom: 1rem;
-        border: 2px solid white;
+      h3 {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: $general-lightblue;
+        position: absolute;
+        top: -40px;
+        left: 0px;
+  
       }
+  
+      .row {
+        @include flex(row, space-between, stretch, wrap);
+        margin-top: 15px;
+  
+        .col {
+          width: calc(100% / 6);
+          margin-bottom: 1rem;
+          border: 2px solid white;
+        }
+      }
+
     }
+
   }
 
 }
