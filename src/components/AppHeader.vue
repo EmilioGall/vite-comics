@@ -101,11 +101,11 @@ header {
   // Debug
   // border: 1px solid lightcoral;
 
-  .menu-container {
+  .logo-container {
 
     img {
       aspect-ratio: 1;
-      width: 80px;
+      width: calc($header-height - 20px);
 
     }
 
