@@ -1,5 +1,6 @@
 <script>
 import { comicsArray } from "../assets/data/dc-comics.js";
+import SimpleCard from "./SimpleCard.vue";
 
 export default {
 
@@ -9,6 +10,12 @@ export default {
       comics: comicsArray,
 
     };
+  },
+
+  components: {
+
+    SimpleCard,
+
   },
 
 };
@@ -35,13 +42,11 @@ export default {
 
         <div class="row">
 
-          <div class="col" v-for="prod in comics">
+          <div class="col" v-for="title in comics">
 
-            <h1>hello</h1>
-            <!-- <ProductCard 
-            :cardImage="prod.src" 
-            :cardTitle="prod.titolo" 
-            :cardType="prod.tipo" /> -->
+            <SimpleCard 
+            :cardImage="title.thumb" 
+            :cardTitle="title.series"/>
 
           </div>
 
@@ -106,7 +111,10 @@ export default {
         .col {
           width: calc(100% / 6);
           margin-bottom: 1rem;
-          border: 2px solid white;
+
+          // Debug
+          // border: 2px solid white;
+
         }
       }
 
