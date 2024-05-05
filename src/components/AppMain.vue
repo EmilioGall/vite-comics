@@ -1,22 +1,42 @@
 <script>
+import { comicsArray } from "../assets/data/dc-comics.js";
 
 export default {
 
+  data() {
+    return {
 
+      comics: comicsArray,
+
+    };
+  },
 
 };
-
 </script>
 
 <template>
 
   <div id="main-container">
 
-    <div class="wrapper">
+    <!-- Cover Section -->
+    <section>
 
-      <h2>Main content</h2>
+      <img src="" alt="">
 
-    </div>
+    </section>
+    <!-- Cover Section -->
+
+    <!-- Titles Grid Section -->
+    <section class="wrapper">
+
+      <h3>CURRENT SERIES</h3>
+
+      <div>
+
+      </div>
+
+    </section>
+    <!-- /Titles Grid Section -->
 
   </div>
 
