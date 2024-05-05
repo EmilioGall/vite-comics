@@ -19,19 +19,33 @@ export default {
   <div id="main-container">
 
     <!-- Cover Section -->
-    <section>
+    <section class="cover-banner">
 
-      <img src="" alt="">
+      <img src="../assets/img/jumbotron.jpg" alt="">
 
     </section>
     <!-- Cover Section -->
 
     <!-- Titles Grid Section -->
-    <section class="wrapper">
+    <section class="titles-grid">
 
-      <h3>CURRENT SERIES</h3>
+      <div class="wrapper">
 
-      <div>
+        <h3>CURRENT SERIES</h3>
+
+        <div class="row">
+
+          <div class="col" v-for="prod in comics">
+
+            <h1>hello</h1>
+            <!-- <ProductCard 
+            :cardImage="prod.src" 
+            :cardTitle="prod.titolo" 
+            :cardType="prod.tipo" /> -->
+
+          </div>
+
+        </div>
 
       </div>
 
@@ -49,10 +63,39 @@ export default {
 #main-container {
   color: $general-white;
   background-color: $general-black;
-  padding: 10px 0;
 
   // Debug
-  height: 250px;
+  // height: 250px;
+
+  .cover-banner {
+    height: calc($header-height * 4);
+    position: relative;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      position: absolute;
+      margin: auto;
+
+    }
+
+  }
+
+  .titles-grid {
+    padding: 1rem 1rem;
+
+    @include flex(column, center, center);
+
+    .row {
+      @include flex(row, space-between, stretch, wrap);
+
+      .col {
+        width: calc(100% / 6);
+        margin-bottom: 1rem;
+        border: 2px solid white;
+      }
+    }
+  }
 
 }
 </style>
